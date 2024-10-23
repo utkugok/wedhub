@@ -1,10 +1,12 @@
-﻿namespace WedMauiApp
+﻿using WedMauiApp.ViewModels;
+
+namespace WedMauiApp;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        this.BindingContext = new AppShellViewModel();
     }
 }
